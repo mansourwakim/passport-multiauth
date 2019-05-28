@@ -32,6 +32,7 @@ class AddCustomProvider
     {
         $this->defaultApiProvider = config('auth.guards.api.provider');
 
+        // Uses request helper
         $provider = request('provider');
 
         if ($this->invalidProvider($provider)) {
